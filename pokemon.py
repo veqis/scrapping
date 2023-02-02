@@ -9,6 +9,10 @@ tabelaPoke = soup.find("table", attrs={"id":"pokedex"})
 
 corpo = soup.tbody
 
+#f = open("pokemons.csv", "w")
+#f.write('Id, Nome, Tipo1, Tipo2, Total, Hp, Attack, Defense, Sp_attack, Sp_def, Speed\n')
+#f.close()
+
 def gravar(id, nome, tipo1, tipo2, total, hp, attack, defense, sp_attack, sp_def, speed):
     f = open("pokemons.csv", "a", encoding="utf-8")
     f.writelines('{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n'.format(
